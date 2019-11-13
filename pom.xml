@@ -11,7 +11,7 @@
 
  <modelVersion>4.0.0</modelVersion>
  <groupId>org.phpsample</groupId>
- <artifactId>Octavia_project</artifactId>
+ <artifactId>projCert</artifactId>
  <packaging>website</packaging>
  <version>1.0-SNAPSHOT</version>
  <build>
