@@ -1,0 +1,50 @@
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+ <parent>
+   <groupId>org.phpsample</groupId>
+ <artifactId>website</artifactId>
+ <version>1.0-SNAPSHOT</version>
+ </parent>
+ <build>
+  <plugins>
+ <plugin>
+    <groupId>org.phpmaven</groupId>
+    <artifactId>maven-php-plugin</artifactId>
+    <extensions>true</extensions>
+   </plugin>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-site-plugin</artifactId>
+    <version>3.0</version>
+    <configuration>
+     <reportPlugins>
+      <plugin>
+       <groupId>org.phpmaven</groupId>
+       <artifactId>maven-php-plugin</artifactId>
+       <reportSets>
+        <reportSet>
+         <reports>
+<report>phpdocumentor</report>
+          <report>phpunit-coverage</report>
+          <report>phpunit</report>  
+         </reports>
+        </reportSet>
+       </reportSets>
+      </plugin>
+     </reportPlugins>
+    </configuration>
+   </plugin>
+  </plugins>
+ </build>
+
+ <dependencies>
+  <!--  phpUnit for PHP 5 -->
+  <dependency>
+   <groupId>de.phpunit</groupId>
+   <artifactId>PHPUnit</artifactId>
+   <version>3.6.10</version>
+<type>phar</type>
+  </dependency>
+ </dependencies>
+</project>
